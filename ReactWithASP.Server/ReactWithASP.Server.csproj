@@ -10,21 +10,14 @@
   </PropertyGroup>
 
 	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.15" />
 		<PackageReference Include="Microsoft.AspNetCore.SpaProxy">
 			<Version>8.*-*</Version>
 		</PackageReference>
-		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
-			<PackageReference Include="Microsoft.AspNerCore.Identity.EntityFrameworkCore" Version="8.x"/>
-			<PackageReference Include="Microsoft.EntityFrameworkcore" Version="8.x"/>
-			<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.x">
-				<PrivateAssets>all</PrivateAssets>
-				<IncludeAssets>runtime; build; native; contentfiles; analysers; buildtransitive</IncludeAssets>
-			</PackageReference>
-			<PackageReference Include="Micosoft.EntityFrameworkCore.SqlServer" Version="8.x"/>
-			<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.x">
-				<PrivateAssets>all</PrivateAssets>
-				<IncludeAssets>runtime; build; native; contentfiles; analysers; buildtransitive</IncludeAssets>
-			</PackageReference>
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.15" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.15" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="8.1.1" />
+
 	</ItemGroup>
 
   <ItemGroup>

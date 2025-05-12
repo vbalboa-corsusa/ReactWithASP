@@ -1,30 +1,4 @@
-import { useState, useEffect } from 'react';
-import { createConnection } from './chat.ts';
-
-function ChatRoom({ roomId }) {
-  const [serverUrl, setServerUrl] = useState('https://localhost:1234');
-
-  useEffect(() => {
-    const connection = createConnection(serverUrl, roomId);
-    connection.connect();
-    return () => {
-      connection.disconnect();
-    };
-  }, [roomId, serverUrl]);
-
-  return (
-    <>
-      <label>
-        Server URL:{' '}
-        <input
-          value={serverUrl}
-          onChange={e => setServerUrl(e.target.value)}
-        />
-      </label>
-      <h1>Welcome to the {roomId} room!</h1>
-    </>
-  );
-}
+import { useState } from 'react';
 
 export default function App() {
   const [roomId, setRoomId] = useState('general');
@@ -45,8 +19,6 @@ export default function App() {
       <button onClick={() => setShow(!show)}>
         {show ? 'Close chat' : 'Open chat'}
       </button>
-      {show && <hr />}
-      {show && <ChatRoom roomId={roomId} />}
     </>
   );
 }

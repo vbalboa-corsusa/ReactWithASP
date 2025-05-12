@@ -1,4 +1,5 @@
-export function createConnection(serverUrl, roomId) {
+/* eslint-disable @typescript-eslint/no-explicit-any */
+export function createConnection({ serverUrl, roomId }: { serverUrl: any; roomId: any; }) {
   // A real implementation would actually connect to the server
   return {
     connect() {
